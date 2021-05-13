@@ -66,7 +66,7 @@ Note: This tutorial was created using macOS 11.3.1.
     --background
     ```
 
-5.  Perform one-time initialize the CockroachDB Cluster
+5.  Perform one-time initialization the CockroachDB Cluster
 
     ```zsh
     cockroach init --insecure --host=localhost:26257
