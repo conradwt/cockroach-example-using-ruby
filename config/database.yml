@@ -21,7 +21,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV.fetch("COCKROACH_HOST") { 'localhost' } %>
-  port: <%= ENV.fetch("COCKROACH_PORT") { 56960 } %>
+  port: <%= ENV.fetch("COCKROACH_PORT") { 26257 } %>
   user: <%= ENV.fetch("COCKROACH_USER") { 'root' } %>
   password: <%= ENV.fetch("COCKROACH_PASSWORD") { 'admin' } %>
   requiressl: true

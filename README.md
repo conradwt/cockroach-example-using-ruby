@@ -30,38 +30,84 @@ Note: This tutorial was created using macOS 11.3.1.
 
 1.  Open new terminal window
 
-2.  Start CockroachDB
+2.  Create node1 of CockroachDB Cluster
 
     ```zsh
-    cockroach demo --empty
+    cockroach start \
+    --insecure \
+    --store=node1 \
+    --listen-addr=localhost:26257 \
+    --http-addr=localhost:8080 \
+    --join=localhost:26257,localhost:26258,localhost:26259 \
+    --background
     ```
 
-    Note: Please make note of the database credentials for `username`, `password`, and `port`. The port information can be obtained from the line that begins with `(sql/tcp)`.
+3.  Create node2 of CockroachDB Cluster
 
-3.  Create the database by entering the following within the console:
+    ```zsh
+    cockroach start \
+    --insecure \
+    --store=node2 \
+    --listen-addr=localhost:26258 \
+    --http-addr=localhost:8081 \
+    --join=localhost:26257,localhost:26258,localhost:26259 \
+    --background
+    ```
+
+4.  Create node3 of CockroachDB Cluster
+
+    ```zsh
+    cockroach start \
+    --insecure \
+    --store=node3 \
+    --listen-addr=localhost:26259 \
+    --http-addr=localhost:8082 \
+    --join=localhost:26257,localhost:26258,localhost:26259 \
+    --background
+    ```
+
+5.  Perform one-time initialize the CockroachDB Cluster
+
+    ```zsh
+    cockroach init --insecure --host=localhost:26257
+    ```
+
+    Note: One should see the following successful message:
+
+    ```zsh
+    Cluster successfully initialized
+    ```
+
+6.  Connect to the built-in SQL Client
+
+    ```zsh
+    cockroach sql --insecure --host=localhost:26257
+    ```
+
+7.  Create the database by entering the following within the console:
 
     e.g.
 
     ```zsh
-    root@127.0.0.1:56960/defaultdb> CREATE DATABASE cockroach_example_using_rails_development;
+    root@127.0.0.1:26257/defaultdb> CREATE DATABASE cockroach_example_using_rails_development;
     ```
 
-4.  Open another terminal window
+8.  Open another terminal window
 
-5.  Generate a new Rails application
+9.  Generate a new Rails application
 
     ```zsh
     rails new cockroach-example-using-rails -d postgresql --skip-active-storage -T --no-rc
     ```
 
-6.  Add the ActiveRecord CockroachDB Adapter by doing the following:
+10. Add the ActiveRecord CockroachDB Adapter by doing the following:
 
     ```zsh
     bundle remove pg
     bundle add activerecord-cockroachdb-adapter
     ```
 
-7.  Update the database adapter as follows within `database.yml`:
+11. Update the database adapter as follows within `database.yml`:
 
     replace
 
@@ -75,44 +121,53 @@ Note: This tutorial was created using macOS 11.3.1.
     adapter: cockroachdb
     ```
 
-8.  Add the following after the `pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>` setting within `database.yml`:
+12. Add the following after the `pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>` setting within `database.yml`:
 
     ```yml
     host: <%= ENV.fetch("COCKROACH_HOST") { 'localhost' } %>
-    port: <%= ENV.fetch("COCKROACH_PORT") { 63117 } %>
+    port: <%= ENV.fetch("COCKROACH_PORT") { 26257 } %>
     user: <%= ENV.fetch("COCKROACH_USER") { 'root' } %>
     password: <%= ENV.fetch("COCKROACH_PASSWORD") { 'admin' } %>
     requiressl: true
     ```
 
-9.  Generate scaffold of the application
+13. Generate scaffold of the application
 
     ```zsh
     rails g scaffold post title body:text
     ```
 
-10. Migrate the database.
+14. Migrate the database.
 
     ```zsh
     rails db:migrate
     ```
 
-10. Add the following as the first route within config/routes.rb file:
+15. Add the following as the first route within config/routes.rb file:
 
     ```ruby
     root 'posts#index'
     ```
 
-13. Start the Rails server
+16. Start the Rails server
 
     ```
     $ rails s
     ```
 
-14. Play with the application
+17. Play with the application
 
     ```zsh
     open http://localhost:3000
+    ```
+
+18. Cleanu CockroachDB Cluster
+
+    ```zsh
+    cockroach quit --insecure --host=localhost:26257
+    cockroach quit --insecure --host=localhost:26258
+    cockroach quit --insecure --host=localhost:26259
+    rm -rf node1 node2 node3
     ```
 
 ---
