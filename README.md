@@ -4,17 +4,17 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- [CockroachDB v21.1.9 or newer](https://www.cockroachlabs.com/docs/v21.1/install-cockroachdb.html)
+- CockroachDB v21.1.11 or newer
 
 - Libpq 7.2.0 or newer
 
-- Node 14.18.0 or newer
+- Node 14.18.1 or newer
 
 - Rails 6.1.4.1 or newer
 
-- Ruby 3.0.1 or newer
+- Ruby 3.0.2 or newer
 
-- Yarn 1.22.15 or newer
+- Yarn 1.22.17 or newer
 
 Note: This tutorial was created using macOS 11.6.
 
