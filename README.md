@@ -151,8 +151,8 @@ Note: This tutorial was created using macOS 11.6.
 
 16. Start the Rails server
 
-    ```
-    $ rails s
+    ```zsh
+    rails s
     ```
 
 17. Play with the application
