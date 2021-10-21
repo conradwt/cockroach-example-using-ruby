@@ -161,7 +161,7 @@ Note: This tutorial was created using macOS 11.6.
     open http://localhost:3000
     ```
 
-18. Cleanu CockroachDB Cluster
+18. Clean CockroachDB Cluster
 
     ```zsh
     cockroach quit --insecure --host=localhost:26257
