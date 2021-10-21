@@ -4,7 +4,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- CockroachDB v21.1.11 or newer
+- CockroachDB 21.1.11 or newer
 
 - Libpq 7.2.0 or newer
 
