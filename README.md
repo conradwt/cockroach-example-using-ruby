@@ -4,11 +4,11 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- CockroachDB 21.1.11 or newer
+- CockroachDB 21.2.3 or newer
 
 - Libpq 7.2.0 or newer
 
-- Node 14.18.1 or newer
+- Node 14.18.2 or newer
 
 - Rails 6.1.4.1 or newer
 
@@ -16,7 +16,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Yarn 1.22.17 or newer
 
-Note: This tutorial was created using macOS 11.6.
+Note: This tutorial was created using macOS 11.6.2.
 
 ## Communication
 
