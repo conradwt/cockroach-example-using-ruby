@@ -1,6 +1,6 @@
-# Cockroach Example Using Rails
+# Cockroach Example Using Ruby
 
-The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cockroach database engine with the Rails web framework for development.
+The purpose of this step by step tutorial is to provide a very simple example of configuring and using Cockroach database engine with the Ruby Language.
 
 ## Requirements
 
@@ -97,7 +97,7 @@ Note: This tutorial was created using macOS 11.6.2.
 9.  Generate a new Rails application
 
     ```zsh
-    rails new cockroach-example-using-rails -d postgresql --skip-active-storage -T --no-rc
+    rails new cockroach-example-using-ruby -d postgresql --skip-active-storage -T --no-rc
     ```
 
 10. Add the ActiveRecord CockroachDB Adapter by doing the following:
@@ -182,9 +182,9 @@ Note: This tutorial was created using macOS 11.6.2.
 
 ## Support
 
-Bug reports and feature requests can be filed for the cassandra-example-using-rails project here:
+Bug reports and feature requests can be filed for the cassandra-example-using-ruby project here:
 
-- [File Bug Reports and Features](https://github.com/conradwt/cockroach-example-using-rails/issues)
+- [File Bug Reports and Features](https://github.com/conradwt/cockroach-example-using-ruby/issues)
 
 ## Contact
 
