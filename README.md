@@ -10,7 +10,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node 14.18.2 or newer
 
-- Rails 7.0.1 or newer
+- Rails 7.0.0 or newer
 
 - Ruby 3.0.2 or newer
 
