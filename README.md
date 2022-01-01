@@ -10,7 +10,7 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node 14.18.2 or newer
 
-- Rails 6.1.4.1 or newer
+- Rails 7.0.0 or newer
 
 - Ruby 3.0.2 or newer
 
@@ -97,14 +97,17 @@ Note: This tutorial was created using macOS 11.6.2.
 9.  Generate a new Rails application
 
     ```zsh
-    rails new cockroach-example-using-ruby -d postgresql --skip-active-storage -T --no-rc
+    rails new cockroach-example-using-ruby -d postgresql --skip-active-storage --skip-javascript -T --no-rc
     ```
 
 10. Add the ActiveRecord CockroachDB Adapter by doing the following:
 
     ```zsh
     bundle remove pg
-    bundle add activerecord-cockroachdb-adapter
+    bundle add activerecord-cockroachdb-adapter \
+      --git "https://github.com/conradwt/activerecord-cockroachdb-adapter" \
+      --branch "upgrade-to-support-rails-7.0.0"
+    bundle add sassc-rails
     ```
 
 11. Update the database adapter as follows within `database.yml`:
