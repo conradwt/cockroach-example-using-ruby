@@ -4,7 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.0"
+# gem "rails", github: "rails/rails", branch: "main"
+gem 'rails', '~> 7.0.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -52,4 +53,6 @@ group :development do
   # gem "spring"
 end
 
-gem 'activerecord-cockroachdb-adapter', '~> 6.1'
+gem "activerecord-cockroachdb-adapter", "~> 6.1", :git => "https://github.com/conradwt/activerecord-cockroachdb-adapter", :branch => "upgrade-to-support-rails-7.0.0"
+
+gem "sassc-rails", "~> 2.1"
