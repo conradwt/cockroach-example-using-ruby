@@ -207,14 +207,14 @@ DEPENDENCIES
   debug
   jbuilder
   puma (~> 5.0)
-  rails (~> 7.0.0)
+  rails (~> 7.0.1)
   sassc-rails (~> 2.1)
   sprockets-rails
   tzinfo-data
   web-console
 
 RUBY VERSION
-   ruby 3.0.2p107
+   ruby 3.1.0p0
 
 BUNDLED WITH
-   2.2.22
+   2.3.6
