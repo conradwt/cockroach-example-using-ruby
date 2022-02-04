@@ -53,6 +53,6 @@ group :development do
   # gem "spring"
 end
 
-gem "activerecord-cockroachdb-adapter", "~> 6.1", :git => "https://github.com/conradwt/activerecord-cockroachdb-adapter", :branch => "upgrade-to-support-rails-7.0.0"
+gem "activerecord-cockroachdb-adapter", "~> 7.0.0", :git => "https://github.com/conradwt/activerecord-cockroachdb-adapter", :branch => "upgrade-to-support-rails-7.0.0"
 
 gem "sassc-rails", "~> 2.1"
