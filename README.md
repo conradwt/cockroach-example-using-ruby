@@ -105,8 +105,8 @@ Note: This tutorial was created using macOS 12.4.
     ```zsh
     bundle remove pg
     bundle add activerecord-cockroachdb-adapter \
-      --git "https://github.com/conradwt/activerecord-cockroachdb-adapter" \
-      --branch "upgrade-to-support-rails-7.0.0"
+      --git "https://github.com/cockroachdb/activerecord-cockroachdb-adapter" \
+      --branch "master"
     bundle add sassc-rails
     ```
 
