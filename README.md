@@ -8,9 +8,9 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Libpq 7.2.0 or newer
 
-- Node 18.3.0 or newer
+- Node 18.7.0 or newer
 
-- Rails 7.0.3 or newer
+- Rails 7.0.3.1 or newer
 
 - Ruby 3.1.2 or newer
 
