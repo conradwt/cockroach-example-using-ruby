@@ -4,19 +4,19 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 ## Requirements
 
-- CockroachDB 22.1.2 or newer
+- CockroachDB 22.2.0 or newer
 
 - Libpq 7.2.0 or newer
 
-- Node 18.8.0 or newer
+- Node 18.12.1 or newer
 
-- Rails 7.0.3.1 or newer
+- Rails 7.0.4 or newer
 
 - Ruby 3.1.2 or newer
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was created using macOS 12.5.1.
+Note: This tutorial was created using macOS 12.6.
 
 ## Communication
 
