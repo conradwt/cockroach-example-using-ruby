@@ -201,4 +201,4 @@ This repository is released under the [MIT License](./LICENSE.md).
 
 ## Copyright
 
-&copy; Copyright 2021 - 2022 Conrad Taylor. All Rights Reserved.
+&copy; Copyright 2021 - 2023 Conrad Taylor. All Rights Reserved.
