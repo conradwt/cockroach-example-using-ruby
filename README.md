@@ -10,13 +10,13 @@ The purpose of this step by step tutorial is to provide a very simple example of
 
 - Node 18.12.1 or newer
 
-- Rails 7.0.4 or newer
+- Rails 7.0.4.1 or newer
 
 - Ruby 3.1.2 or newer
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was created using macOS 12.6.
+Note: This tutorial was created using macOS 12.6.2.
 
 ## Communication
 
@@ -104,9 +104,7 @@ Note: This tutorial was created using macOS 12.6.
 
     ```zsh
     bundle remove pg
-    bundle add activerecord-cockroachdb-adapter \
-      --git "https://github.com/cockroachdb/activerecord-cockroachdb-adapter" \
-      --branch "master"
+    bundle add activerecord-cockroachdb-adapter --version "~> 7.0.0"
     bundle add sassc-rails
     ```
 
